@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: aliceblue;
+}
+.bg{
+    width: 600px;
+    height: 800px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+h1,h2,h4{
+    font-family: 'Kanit';
+    font-weight: 400;
+}
+.input{
+    width: 380px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'kanit';
+    padding: 10px;
+}
+.correct{
+    border: 3px solid green;
+}
+.incorrect{
+    border: 3px solid red;
+}
+.h1-main{
+    text-align: center;
+    margin-top: 40px;
+}
+.h2{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.button{
+    margin-top: 40px;
+    background-color: cornflowerblue;
+    font-size: 20px;
+    font-family: 'kanit';
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    height: 50px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.errormassage1,.errormassage2,.errormassage3,.errormassage4{
+    color: red;
+    margin-left: 100px;
+    display: none;
+}
+.errormassage1pop{
+    display:block;
+    margin-left: 100px;
+    color: red;
+}
+.errormassage2pop{
+    display: block;
+    margin-left: 100px;
+    color: red;
+}
+.errormassage3pop{
+    display: block;
+    margin-left: 100px;
+    color: red;
+}
+.errormassage4pop{
+    display: block;
+    margin-left: 100px;
+    color: red;
+}
