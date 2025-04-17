@@ -1,4 +1,3 @@
-"use strict";
 let nameUser = document.querySelector('#nameuser');
 let emailUser = document.querySelector('#emailuser');
 let passwordUser = document.querySelector('#passworduser');
@@ -30,7 +29,7 @@ nameUser.addEventListener('input', function () {
     }
 });
 emailUser.addEventListener('input', function () {
-    if (!emailUser.value.includes("@gmail.com")) {
+    if (!validateEmail(emailUser.value)) {
         if (emailUser.classList.contains('correct')) {
             emailUser.classList.replace('correct', 'incorrect');
             errorTextEmail.classList.replace('errormassage2', 'errormassage2pop');
@@ -40,7 +39,7 @@ emailUser.addEventListener('input', function () {
             errorTextEmail.classList.replace('errormassage2', 'errormassage2pop');
         }
     }
-    else if (emailUser.value.includes("@gmail.com")) {
+    else if (validateEmail(emailUser.value)) {
         if (emailUser.classList.contains('incorrect')) {
             emailUser.classList.replace('incorrect', 'correct');
             errorTextEmail.classList.replace('errormassage2pop', 'errormassage2');
@@ -101,3 +100,11 @@ function submit() {
         });
     }
 }
+
+const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
