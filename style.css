@@ -85,3 +85,15 @@ h1,h2,h4{
     margin-left: 100px;
     color: red;
 }
+.show{
+    width: 130px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 98px;
+    font-family: 'kanit';
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: -20px;
+    cursor: pointer;
+}

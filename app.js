@@ -50,6 +50,7 @@ emailUser.addEventListener('input', function () {
         }
     }
 });
+
 passwordUser.addEventListener('input', function () {
     if (passwordUser.value.length < 5) {
         if (passwordUser.classList.contains('correct')) {
@@ -66,6 +67,17 @@ passwordUser.addEventListener('input', function () {
         errorTextPassword.classList.replace('errormassage3pop', 'errormassage3');
     }
 });
+const button = document.getElementById('buttonShow')
+    button.addEventListener('click',function(){
+        if(passwordUser.getAttribute('type') === 'password'){
+            passwordUser.setAttribute('type','text')
+            button.innerText="ซ่อนรหัสผ่าน"
+        }
+        else{
+            passwordUser.setAttribute('type','password')
+            button.innerText="แสดงรหัสผ่าน"
+        }
+    })
 confirmPassword.addEventListener('input', function () {
     if (confirmPassword.value !== passwordUser.value) {
         if (confirmPassword.classList.contains('correct')) {
