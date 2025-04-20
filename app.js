@@ -7,6 +7,8 @@ let errorTextEmail = document.querySelector('.errormassage2');
 let errorTextPassword = document.querySelector('.errormassage3');
 let errorTextConfirm = document.querySelector('.errormassage4');
 nameUser.addEventListener('input', function () {
+    const amout = document.getElementById('amount')
+    const limit = document.getElementById('limit')
     if (nameUser.value.length < 5) {
         if (nameUser.classList.contains('correct')) {
             nameUser.classList.replace('correct', 'incorrect');
@@ -27,11 +29,6 @@ nameUser.addEventListener('input', function () {
             errorTextName.classList.replace('errormassage1pop', 'errormassage1');
         }
     }
-});
-
-const amout = document.getElementById('amount')
-const limit = document.getElementById('limit')
-nameUser.addEventListener("keyup",function(){
     let count = nameUser.value.length
     amout.innerText = count
     if(count>10){
@@ -41,7 +38,9 @@ nameUser.addEventListener("keyup",function(){
     else{
         limit.classList.remove('active')
     }
-})
+});
+
+
 emailUser.addEventListener('input', function () {
     if (!validateEmail(emailUser.value)) {
         if (emailUser.classList.contains('correct')) {
