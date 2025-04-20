@@ -97,3 +97,14 @@ h1,h2,h4{
     margin-bottom: -20px;
     cursor: pointer;
 }
+.limit{
+    display: flex;
+    font-family: 'kanit';
+    position: absolute;
+    top:240px;
+    left: 1120px;
+    font-weight: 200;
+}
+.active{
+    color: red;
+}

@@ -28,6 +28,20 @@ nameUser.addEventListener('input', function () {
         }
     }
 });
+
+const amout = document.getElementById('amount')
+const limit = document.getElementById('limit')
+nameUser.addEventListener("keyup",function(){
+    let count = nameUser.value.length
+    amout.innerText = count
+    if(count>10){
+        limit.classList.add('active')
+        nameUser.classList.replace('correct', 'incorrect');
+    }
+    else{
+        limit.classList.remove('active')
+    }
+})
 emailUser.addEventListener('input', function () {
     if (!validateEmail(emailUser.value)) {
         if (emailUser.classList.contains('correct')) {
